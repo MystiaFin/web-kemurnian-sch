@@ -120,10 +120,6 @@
     // Global functions
     window.goToSlide = goToSlide;
     
-    // Event listeners
-    const carousel = document.getElementById('hero-carousel');
-    carousel.addEventListener('mouseenter', stopTimer);
-    carousel.addEventListener('mouseleave', startTimer);
     
     document.addEventListener('visibilitychange', () => {
         document.hidden ? stopTimer() : startTimer();
