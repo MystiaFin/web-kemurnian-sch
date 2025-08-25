@@ -2,26 +2,21 @@
 namespace App\View\Components;
 
 use Closure;
-use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 use Illuminate\Support\Facades\Http;
+use App\Models\HeroBanner;
 
 class HeroSliders extends Component
 {
-    public $data;
+    public $heroBanners;
 
     public function __construct()
     {
-        try {
-            $response = Http::get('http://localhost:8000/api/hero-banners');
-            $this->data = $response->successful() ? $response->json() : [];
-        } catch (\Exception $e) {
-            $this->data = [];
-        }
+        $this->heroBanners = HeroBanner::all();
     }
 
-    public function render(): View|Closure|string
+    public function render()
     {
-        return view('components.hero-sliders', ['data' => $this->data]);
+        return view('components.hero-sliders');
     }
 }
