@@ -12,9 +12,8 @@
 <body>
     {{-- Navbar Component --}}
     <x-navbar />
-    <main class="mt-16">
+    <main class="mt-16 font-[var(--font-raleway)]">
         {{ $slot }}
-        <div class="text-2xl">test</div>
     </main>
 </body>
 

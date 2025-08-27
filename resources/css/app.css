@@ -1,15 +1,21 @@
 @import "tailwindcss";
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@0,18..144,106.9,300;1,18..144,106.9,300&display=swap');
+
+@source './resources/views/**/*.blade.php';
+@source './resources/js/**/*.js';
+@source './resources/**/*.vue';
 
 @theme {
-    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Noto Color Emoji";
+  --color-gray-primary: #2b2828;
+  --color-btn-primary: #8b0000;
+  --color-text-primary: #252525;
 
-    --color-gray-primary: #2b2828;
-    --color-btn-primary: #8b0000;
+}
+
+:root {
+  background-color: #ecf0f1;
+  --font-raleway: 'Raleway', sans-serif;
+  --font-merriweather: 'Merriweather', serif;
 }
