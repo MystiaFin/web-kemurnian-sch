@@ -149,9 +149,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.hidden ? stopTimer() : startTimer();
     });
     
-    // Pause on hover
-    track.addEventListener('mouseenter', stopTimer);
-    track.addEventListener('mouseleave', startTimer);
     
     // Initialize
     loadImage(0); // Load first image immediately
