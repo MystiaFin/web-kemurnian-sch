@@ -1,9 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-
 <div>
-    this is the kurikulum page
+    <a href="{{ route('admin.new-kurikulum')  }}">new kurikulum</a>
 </div>
-
 @endsection
