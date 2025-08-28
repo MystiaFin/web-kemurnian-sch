@@ -22,5 +22,6 @@ class HeroSliders extends Component
     public function render()
     {
         return view('components.hero-sliders');
+        return view('admin.hero-section');
     }
 }
