@@ -12,6 +12,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/about', function() {
+    return view('about');
+});
+
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/hero-section', [HeroSectionController::class, 'index'])->name('admin.hero-section');

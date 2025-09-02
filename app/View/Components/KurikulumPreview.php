@@ -5,15 +5,18 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use App\Models\KurikulumContent;
+use Illuminate\Support\Facades\Cache;
 
 class KurikulumPreview extends Component
 {
-    /**
-     * Create a new component instance.
-     */
+    public $kurikulum;
+
     public function __construct()
     {
-        //
+        $this->kurikulum = Cache::remember('kurikulum', 3600, function () {
+            return KurikulumContent::select(['id', 'title', 'body'])->get();
+        });
     }
 
     /**
