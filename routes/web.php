@@ -20,6 +20,10 @@ Route::prefix('admin')->group(function () {
     Route::get('/new-kurikulum', [NewKurikulumController::class, 'index'])->name('admin.new-kurikulum');
     Route::post('/new-kurikulum', [NewKurikulumController::class, 'store'])->name('admin.new-kurikulum-store');
 
+    Route::get('/kurikulum/{id}/edit', [KurikulumSectionController::class, 'edit'])->name('admin.edit-kurikulum');
+    Route::put('/kurikulum/{id}', [KurikulumSectionController::class, 'update'])->name('admin.kurikulum.update');
+    Route::delete('/kurikulum/{id}', [KurikulumSectionController::class, 'destroy'])->name('admin.kurikulum.destroy');
+
     Route::get('/news-approval', [NewsApprovalController::class, 'index'])->name('admin.news-approval');
     Route::get('/news-section', [NewsSectionController::class, 'index'])->name('admin.news-section');
 });
