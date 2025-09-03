@@ -16,6 +16,7 @@
     </div>
     @yield('content')
     @vite('resources/js/app.js')
+    <x-footer/>
 </body>
 
 </html>

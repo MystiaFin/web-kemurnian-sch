@@ -15,6 +15,7 @@
     <main class="mt-16">
         {{ $slot }}
     </main>
+    <x-footer/>
 </body>
 
 </html>

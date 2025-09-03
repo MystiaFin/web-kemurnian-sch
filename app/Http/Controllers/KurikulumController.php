@@ -7,7 +7,7 @@ class KurikulumController extends Controller
 {
     public function index()
     {
-        $kurikulum = KurikulumContent::all();
+        $kurikulum = KurikulumContent::orderBy('id', 'asc')->get();
         return response()->json($kurikulum);
     }
 
@@ -15,7 +15,6 @@ class KurikulumController extends Controller
     {
         $data = KurikulumContent::findOrFail($id);
         
-        // Clean up QuillJS formatting
         $data->body = $this->cleanQuillJSContent($data->body);
         
         return view('kurikulum-details', compact('data'));

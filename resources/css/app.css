@@ -1,7 +1,5 @@
-@import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import "tailwindcss";
 @source './resources/views/**/*.blade.php';
 @source './resources/js/**/*.js';
 @source './resources/**/*.vue';
@@ -19,6 +17,7 @@
     --color-btn-primary: #8b0000;
     --color-btn-hover: #730202;
     --color-red-primary: #7b1113;
+    --color-black-primary: #0e1015;
     --color-text-primary: #252525;
     --font-raleway: "Raleway", sans-serif;
     --font-merriweather: "Merriweather";
