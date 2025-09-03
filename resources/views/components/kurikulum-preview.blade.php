@@ -22,7 +22,7 @@ $paragraph = 'font-merriweather font-[100] leading-loose tracking-wider text-cen
                     }
                 @endphp
                 <p class="font-merriweather {{ $paragraph }}">{{ $snippet }}</p>
-                <x-button href="{{ route('kurikulum.show', $item->id) }}" text="READ ON"/>
+                <x-button href="{{ route('kurikulum.details', $item->id) }}" text="READ ON"/>
             </div>
             @endforeach
         </div>

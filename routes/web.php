@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\KurikulumSectionController;
 use App\Http\Controllers\Admin\NewKurikulumController;
 use App\Http\Controllers\Admin\NewsApprovalController;
 use App\Http\Controllers\Admin\NewsSectionController;
+use App\Http\Controllers\KurikulumController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,6 +16,8 @@ Route::get('/', function () {
 Route::get('/about', function() {
     return view('about');
 });
+
+Route::get('/details/{id}', [KurikulumController::class, 'show'])->name('kurikulum.details');
 
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
